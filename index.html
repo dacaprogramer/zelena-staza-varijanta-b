@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zelena staza – vođene planinarske ture</title>
+<meta name="description" content="Vođene planinarske i biciklističke ture za sve nivoe kondicije.">
+<link rel="preload" href="poppins-regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" as="image" href="img/hero-1600.avif" imagesrcset="img/hero-800.avif 800w, img/hero-1600.avif 1600w" imagesizes="100vw" type="image/avif">
+<style>
+@font-face{font-family:'Poppins';src:url('poppins-regular.woff') format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:'Poppins';src:url('poppins-bold.woff') format('woff');font-weight:700;font-display:swap}
+:root{--tekst:#2f3437;--prigusen:#555c61;--akcent:#1f6f43;--pozadina:#ffffff;--povrsina:#f3f5f2}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',system-ui,sans-serif;color:var(--tekst);background:var(--pozadina);line-height:1.6}
+.preskoci{position:absolute;left:-999px}.preskoci:focus{left:8px;top:8px;background:#fff;padding:8px}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px clamp(16px,4vw,40px)}
+.logo{font-weight:700;font-size:1.5rem;color:var(--akcent);text-decoration:none}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav a{color:var(--tekst);text-decoration:none;font-weight:700}
+.meni-dugme{display:none}
+.baner{min-height:64px;background:#fff4cc;color:#5c4400;display:flex;align-items:center;justify-content:center;padding:0 16px;text-align:center}
+.hero{position:relative;height:min(50vw,640px);overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-tekst{position:absolute;inset:auto auto 14% 8%;color:#fff;max-width:640px;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:0 0 12px}
+.dugme{display:inline-block;background:var(--akcent);color:#fff;padding:14px 28px;border-radius:28px;font-weight:700;text-decoration:none}
+</style>
+<link rel="stylesheet" href="css/stil.css">
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<a class="preskoci" href="#sadrzaj">Preskoči na sadržaj</a>
+<header>
+  <a class="logo" href="/">Zelena staza</a>
+  <button class="meni-dugme" aria-expanded="false" aria-controls="glavni-meni">Meni</button>
+  <nav aria-label="Glavna navigacija">
+    <ul id="glavni-meni">
+      <li><a href="#ture">Ture</a></li>
+      <li><a href="#o-nama">O nama</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="baner" id="baner" role="status"></div>
+<main id="sadrzaj">
+  <section class="hero">
+    <picture>
+      <source type="image/avif" srcset="img/hero-800.avif 800w, img/hero-1600.avif 1600w" sizes="100vw">
+      <img src="img/hero-1600.webp" srcset="img/hero-800.webp 800w, img/hero-1600.webp 1600w" sizes="100vw"
+           width="1600" height="800" alt="Planinski vrhovi iznad mirnog jezera u sumrak" fetchpriority="high">
+    </picture>
+    <div class="hero-tekst">
+      <h1>Otkrijte planine koje niste poznavali</h1>
+      <p>Vođene ture kroz netaknutu prirodu, za sve uzraste i nivoe kondicije.</p>
+      <a class="dugme" href="#ture">Pogledaj ture</a>
+    </div>
+  </section>
+  <section class="uvod" id="o-nama">
+    <h2>Putovanje koje počinje prvim korakom</h2>
+    <p>Već deset godina organizujemo planinarske i biciklističke ture kroz najljepše predjele regiona. Naši vodiči poznaju svaku stazu, svaki izvor i svako skrovito mjesto za odmor. Bez obzira na to da li ste iskusan planinar ili tek počinjete, za vas imamo turu prilagođenu vašem tempu.</p>
+  </section>
+  <section class="mreza" id="ture" aria-labelledby="ture-naslov">
+    <h2 id="ture-naslov">Izdvojene ture</h2>
+    <article class="kartica"><img src="img/kartica1.webp" width="600" height="400" loading="lazy" alt="Kameniti vrhovi pod plavim nebom"><h3>Vrhovi iznad oblaka</h3><p>Dvodnevni uspon sa noćenjem u planinarskom domu.</p><p class="cijena">od 89 KM</p></article>
+    <article class="kartica"><img src="img/kartica2.webp" width="600" height="400" loading="lazy" alt="Jezero u narandžastom svjetlu zalaska"><h3>Zalazak na jezeru</h3><p>Lagana večernja šetnja uz obalu i fotografisanje.</p><p class="cijena">od 35 KM</p></article>
+    <article class="kartica"><img src="img/kartica3.webp" width="600" height="400" loading="lazy" alt="Snijegom pokriveni grebeni"><h3>Snježni grebeni</h3><p>Zimska tura sa krpljama i stručnim vodičem.</p><p class="cijena">od 120 KM</p></article>
+    <article class="kartica"><img src="img/kartica4.webp" width="600" height="400" loading="lazy" alt="Tamno noćno nebo nad jezerom"><h3>Noć pod zvijezdama</h3><p>Kampovanje i posmatranje neba daleko od gradskih svjetala.</p><p class="cijena">od 75 KM</p></article>
+    <article class="kartica"><img src="img/kartica5.webp" width="600" height="400" loading="lazy" alt="Žuta polja i zelene livade"><h3>Polja i livade</h3><p>Biciklistička tura kroz sela i pašnjake.</p><p class="cijena">od 45 KM</p></article>
+    <article class="kartica"><img src="img/kartica6.webp" width="600" height="400" loading="lazy" alt="Šumoviti kanjon sa rijekom"><h3>Kanjon rijeke</h3><p>Pješačenje uz rijeku i kupanje u prirodnim bazenima.</p><p class="cijena">od 60 KM</p></article>
+  </section>
+  <section class="prijava" id="kontakt">
+    <h2>Prijavite se na novosti</h2>
+    <form>
+      <label for="ime">Ime</label><input id="ime" name="ime" autocomplete="given-name">
+      <label for="email">E-mail adresa</label><input id="email" name="email" type="email" autocomplete="email" required>
+      <button type="submit" class="dugme">Pošalji</button>
+    </form>
+  </section>
+</main>
+<footer>© 2026 Zelena staza · Sva prava zadržana</footer>
+</body>
+</html>

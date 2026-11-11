@@ -1,0 +1,29 @@
+ZELENA STAZA – VARIJANTA B (OPTIMIZOVANA)
+Primjer stranice iz rada „Odluke u web dizajnu i njihov uticaj na rad web stranice“
+
+Isti sadržaj, fotografije i vizuelni identitet kao varijanta A, ali uz odluke
+preporučene u radu: AVIF i WebP slike u odgovarajućim dimenzijama (element
+picture, srcset/sizes, fetchpriority za naslovnu sliku, loading="lazy" za
+kartice, navedeni width/height); dvije podskupljene WOFF datoteke fonta sa
+font-display: swap i preload; kritični stilovi ugrađeni u dokument; skripta sa
+atributom defer; unaprijed rezervisan prostor za baner; semantički HTML,
+oznake polja i veza za preskakanje; oznaka viewport i responzivna mreža;
+boje visokog kontrasta (WCAG AA za sav tekst).
+
+SADRŽAJ
+  index.html              stranica (sa ugrađenim kritičnim stilovima)
+  css/stil.css            ostali stilovi
+  js/app.js               meni za mobilne uređaje i baner
+  img/                    hero-800/1600 (.avif i .webp), kartica1–6.webp (600×400)
+  poppins-regular.woff, poppins-bold.woff   podskupljeni fontovi (SIL OFL 1.1)
+  izvor/                  skripte kojima su napravljene slike i fontovi
+
+Slike su proceduralno generisani pejzaži (izvor/napravi_slike_b.py), bez autorskih
+fotografija; skripta daje identične datoteke.
+
+OTVARANJE
+Najpouzdanije je preko lokalnog servera, jer neki preglednici ne učitavaju
+fontove sa file:// adrese:
+    python -m http.server 8002
+pa u pregledniku otvoriti http://localhost:8002/
+Responzivni prikaz: DevTools > Toggle device toolbar (npr. širina 375 px).
